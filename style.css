@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 16px;
-    color:#f5f5f5;
+    color: #f5f5f5;
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -20,7 +20,7 @@ footer {
     background: #0e0d0d;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
-    color:#222;
+    color: #f5f1f1;
 }
 
 .card:hover {
@@ -50,6 +50,26 @@ footer {
     font-weight: bold;
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 8px;
+    liststyle: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -58,7 +78,7 @@ footer {
 
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("https://image.tmdb.org/t/p/w1280/여기에_backdrop_path");
+        url("https://image.tmdb.org/t/p/w1280//jK65srQczOKTpW62wPxwwKztGgE.jpg");
     background-size: cover;
     background-position: center;
     min-height: 40vh;
@@ -72,3 +92,5 @@ footer {
     justify-content: center;
 }
 
+@media (min-width: 600px) { nav ul { flex-direction: row; gap: 20px; } }
+@media (min-width: 1024px) { .hero { min-height: 60vh; } .hero h2 { font-size: 3rem; } }
